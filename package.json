@@ -1,0 +1,61 @@
+{
+  "name": "relifemedical.co.uk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "type nul > ./bundle.min.js && lessc build/less/main.less s.css && css-combine s.css>style.css && del s.css && move /y style.css css/style.css && webpack-dev-server ./index.js ./bundle.min.js",
+    "publish": "type nul > ./bundle.min.js && lessc build/less/main.less s.css && css-combine s.css>style.css && del s.css && move /y style.css css/style.css && webpack ./index.js ./bundle.min.js && minify --output ./bundle.min.js ./bundle.min.js"
+  },
+  "author": "Taha Erden <tahaerden@windowslive.com> (http://tahaerden.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-cookies": "^1.6.4",
+    "angular-messages": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "angular-toastr": "^2.1.1",
+    "angular-translate": "^2.15.1",
+    "angular-translate-loader-static-files": "^2.15.1",
+    "angular-translate-storage-cookie": "^2.15.1",
+    "angular-translate-storage-local": "^2.15.1",
+    "bootstrap": "^3.3.7",
+    "css-combine": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.12.0",
+    "less": "^2.7.2",
+    "minifier": "^0.8.1"
+  },
+  "dependencies": {},
+  "standard": {
+    "globals": [
+      "$",
+      "angular",
+      "Config",
+      "sessionStorage",
+      "localStorage",
+      "location",
+      "fetch",
+      "moment",
+      "FB",
+      "google",
+      "btoa",
+      "atob",
+      "Blob",
+      "saveAs",
+      "Clipboard",
+      "saveAs",
+      "FileReader",
+      "ol",
+      "html2canvas",
+      "pdfMake",
+      "fileSaver",
+      "File",
+      "lightbox",
+      "kendo"
+    ]
+  }
+}

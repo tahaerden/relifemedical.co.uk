@@ -1,0 +1,63 @@
+h1,h2,h3,h4,h5,h6{
+  color: @color1;
+  text-align: center;
+}
+label{
+  color: @color1;
+}
+p{
+  text-align: justify;
+}
+ul{
+  list-style: none;
+}
+li{
+  list-style-type: none;
+  &::before {
+      content: "•";
+      color: @color1;
+      display: inline-block;
+      position: relative;
+      width: 1em;
+      margin-left: -1em;
+      margin-top: 0.5em;
+      top: 5px;
+      font-size: 2em;
+  }
+}
+.included{
+  text-align: center;
+  padding: 0;
+  li{
+    display: inline-block;
+    background: #e5e5e5;
+    padding: 20px;
+    width: 160px;
+    text-align: center;
+    margin: 10px;
+    &::before {
+      content: none;
+    }
+    .fa{
+      font-size: 40px;
+    }
+  }
+}
+.priceBoxWrapper{
+  display: inline-block;
+  height: 400px;
+  margin: 10px 0;
+  vertical-align: top;
+  text-align: center;
+}
+.priceBox{
+  padding:30px;
+  border: 1px solid lightgrey;
+  height: 100%;
+}
+.price{
+  font-size: 30px;
+}
+.panel-title{
+  text-align: left;
+}
