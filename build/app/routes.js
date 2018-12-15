@@ -36,11 +36,11 @@ Routes.config([ '$routeProvider', function ($routeProvider) {
     .when('/hair-tightening', {
       templateUrl: 'views/hair-tightening.html'
     })
-    // asthetical
-    .when('/asthetical-operations', {
-      templateUrl: 'views/asthetical-operations.html'
+    // aesthetical
+    .when('/aesthetical-operations', {
+      templateUrl: 'views/aesthetical-operations.html'
     })
-    // non-surgical asthetical operations
+    // non-surgical aesthetical operations
     .when('/botox', {
       templateUrl: 'views/botox.html'
     })
@@ -53,8 +53,8 @@ Routes.config([ '$routeProvider', function ($routeProvider) {
     .when('/thulium-laser', {
       templateUrl: 'views/thulium-laser.html'
     })
-    // surgical asthetical operations
-          // Mammoplasty
+    // surgical aesthetical operations
+    // Mammoplasty
     .when('/breast-augmentation', {
       templateUrl: 'views/breast-augmentation.html'
     })
