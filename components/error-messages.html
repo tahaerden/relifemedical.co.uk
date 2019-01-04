@@ -1,4 +1,11 @@
-<p ng-message="required">{{'ERROR_REQUIRED' | translate}}</p>
+<p ng-message="required"></p>
+<p ng-message="minlength">This field is too short</p>
+<p ng-message="maxlength">This field is too long</p>
+<p ng-message="min">This number is too small</p>
+<p ng-message="max">This number is too large</p>
+<p ng-message="email">This needs to be a valid email</p>
+<p ng-message="valid">This value is not valid</p>
+<!-- <p ng-message="required">{{'ERROR_REQUIRED' | translate}}</p>
 <p ng-message="minlength">{{'ERROR_MINLENGTH' | translate}}</p>
 <p ng-message="maxlength">{{'ERROR_MAXLENGTH' | translate}}</p>
 <p ng-message="min">{{'ERROR_MIN' | translate}}</p>
@@ -6,4 +13,12 @@
 <p ng-message="email">{{'ERROR_EMAIL' | translate}}</p>
 <p ng-message="taMinText">{{'ERROR_MINLENGTH' | translate}}</p>
 <p ng-message="taMaxText">{{'ERROR_MAXLENGTH' | translate}}</p>
-<p ng-message="valid">{{'ERROR_VALID' | translate}}</p>
+<p ng-message="valid">{{'ERROR_VALID' | translate}}</p> -->
+
+"ERROR_REQUIRED": "",
+"ERROR_MINLENGTH": "This field is too short",
+"ERROR_MAXLENGTH": "This field is too long",
+"ERROR_MIN": "This number is too small",
+"ERROR_MAX": "This number is too large",
+"ERROR_EMAIL": "This needs to be a valid email",
+"ERROR_VALID": "This value is not valid"

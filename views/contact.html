@@ -1,10 +1,15 @@
 <div class="container-fluid">
   <div class="row text-center">
-    <div class="col-sm-5">
+    <div class="col-sm-6">
       <img src="img/contactAesthetic.jpg" class="img-responsive center-block" alt="Relife Medical Care Clinic">
     </div>
-      <div class="col-sm-2">
-        <br><br>
+    <div class="col-sm-6">
+        <img src="img/contactHair.jpg" class="img-responsive center-block" alt="Relife Medical Care Clinic">
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-container">
+      <div class="text-center">
           <i class="icon fa fa-phone color1" style="font-size: 4em;"></i>
           <br>
           +44 0121 443 13 76
@@ -12,15 +17,38 @@
           <i class="icon fa fa-whatsapp color1" style="font-size: 4em;"></i>
           <br>
           +90 554 745 57 35
-          <br><br>
-          <i class="icon fa fa-envelope color1" style="font-size: 4em;"></i>
-          <br>
-          info@relifemedical.co.uk
+            <br><br>
       </div>
-    <div class="col-sm-5">
-        <img src="img/contactHair.jpg" class="img-responsive center-block" alt="Relife Medical Care Clinic">
+        <h1>Contact Us</h1>
+      <form id="contactForm" name="contactForm" ng-submit="sendMessage(conctactFormObj)" novalidate>
+        <div class="col-md-12">
+          <div class="form-group has-float-label" ng-class="{'has-error': contactForm.email.$invalid}">
+            <input type="email" class="form-control" name="email" ng-model="conctactFormObj.email" placeholder="Email" ng-minlength="4" ng-maxlength="25" required>
+            <label>Email</label>
+            <div class="help-block" ng-messages="contactForm.email.$error">
+              <div ng-messages-include="/components/error-messages.html"></div>
+            </div>
+          </div>
+          <div class="form-group has-float-label" ng-class="{'has-error': contactForm.name.$invalid}">
+            <input type="text" class="form-control" name="name" ng-model="conctactFormObj.name" placeholder="Name And Surname" ng-minlength="4" ng-maxlength="25" required>
+            <label>Name and Surname</label>
+            <div class="help-block" ng-messages="contactForm.name.$error">
+              <div ng-messages-include="/components/error-messages.html"></div>
+            </div>
+          </div>
+          <div class="form-group has-float-label" ng-class="{'has-error': contactForm.message.$invalid}">
+            <textarea rows="3" class="form-control" name="message" ng-model="conctactFormObj.message" placeholder="Your Message" ng-minlength="10" ng-maxlength="200" required>
+            </textarea>
+            <label>Your Message</label>
+            <div class="help-block" ng-messages="contactForm.message.$error">
+              <div ng-messages-include="/components/error-messages.html"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="contactForm.$invalid">Send</button>
+        </div>
+        <div class="clearfix"></div>
+      </form>
     </div>
-  </div>
-  <div class="row text-center">
   </div>
 </div>
